@@ -1,8 +1,11 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^thebombgamer.github.io [NC]
+RewriteRule ^(.*)$ https://hosting-kyle.github.io/$1 [L,R=301]
 #Rewrite to www
 Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^https://thebombgamer.github.io/[nc]
-RewriteRule ^(.*)$ http://www.https://thebombgamer.github.io//$1 [r=301,nc]
+RewriteCond %{HTTP_HOST} ^https://hosting-kyle.github.io/[nc]
+RewriteRule ^(.*)$ http://www.https://hosting-kyle.github.io//$1 [r=301,nc]
 # Caching schema
 <FilesMatch "\.(css|js)$">
 Header set Cache-Control "public, max-age=7200"
@@ -14,7 +17,7 @@ ErrorDocument 401 /401
 # Custom 403 errors
 ErrorDocument 403 /403
 # Custom 404 Not Found Error Page
-ErrorDocument 404 https://thebombgamer.github.io/404
+ErrorDocument 404 https://hosting-kyle.github.io/404
 # Custom 500 errors
 ErrorDocument 500 /500
 # Prevent viewing of .htaccess file
