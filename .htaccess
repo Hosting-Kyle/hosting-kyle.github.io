@@ -3,9 +3,6 @@ RewriteCond %{HTTP_HOST} ^thebombgamer.github.io [NC]
 RewriteRule ^(.*)$ https://hosting-kyle.github.io/$1 [L,R=301]
 #Rewrite to www
 Options +FollowSymLinks
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^https://hosting-kyle.github.io/[nc]
-RewriteRule ^(.*)$ http://www.https://hosting-kyle.github.io//$1 [r=301,nc]
 # Caching schema
 <FilesMatch "\.(css|js)$">
 Header set Cache-Control "public, max-age=7200"
